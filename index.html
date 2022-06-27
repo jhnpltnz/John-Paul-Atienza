@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <script defer src="theme.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+    <title>
+        John Paul Atienza
+    </title>
+    <link rel="icon" type="image/png" href="paul.png">
+</head>
+
+
+<body style="background-color:#df8a41;">
+<main>
+<!-- Home -->
+<!-- Home -->
+<!-- Home -->
+<!-- Home -->
+  <section id="home">
+    <div class="container">
+        <div class="jumbotron">
+
+    <!-- Slides -->
+    <img class="slides" src="paul1 (2).jpg" width="100%">
+    <script>
+    w3.slideshow(".slides", 1500);
+    </script>
+
+    <!-- About -->
+    <div id="about" class="w3-container w3-padding-32">
+    <h1 class="w3-center">Hi Im John Paul Atienza</h1>
+    <p>You can call me Jp.Im 21 years old.My hobbies include,watching vlogs and listening to music.I am an easy going person and I love my life.Nobody comes in this word,without the support of family and friends.Im so thankful for very moment in my life.Actually,whatever you will be,it just because of your family.That I have learned from my parents the value of time,honesty,hard work and commitment to the purpose.
+      Im wanted to guide and take care of my other siblings.
+      We all are in the same school.Dancing is my passion.</p>
+    </div>
+  </section>
+
+  <!-- Family -->
+  <!-- Family -->
+  <!-- Family -->
+  <!-- Family -->
+    <section id="Family">
+      <div class="container">
+          <div class="jumbotron">
+            <h1>Family</h1>
+            <p>I come from small family with with five members.They are my parents,my older brother,me and my sister.My father is a farmer and my mom is a housewife.On top of that I can also add that we often gather together to have a happy meal,talk,out current 
+              life and future life and future plan.In fact my small family always make me 
+              feel relax and comfortable in the moment.</p>
+      <!--Slider-->
+      <div id="slider">
+        <div class="slide" style="background:dodgerBlue;">
+          <img src="paul2.jpg" >
+        </div>
+
+        <div class="slide" style="background:coral;">
+          <img src="paul3.jpg" >
+        </div>
+
+        <div class="slide" style="background:crimson;">
+          <img src="paul4.jpg" >
+        </div>
+
+        <div class="slide" style="background: #6edf10;">
+          <img src="paul12.jpeg" >
+        </div>
+
+        
+
+
+
+
+
+        <!--Controlling arrows-->
+        <span class="controls" onclick="prevSlide(-1)" id="left-arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </span>
+        <span class="controls" id="right-arrow" onclick="nextSlide(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+      </span>
+      </div>
+        <div id="dots-con">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+
+            <script type="text/javascript">
+            var slides = document.querySelectorAll(".slide");
+            var dots = document.querySelectorAll(".dot");
+            var index = 0;
+
+
+            function prevSlide(n){
+              index+=n;
+              console.log("prevSlide is called");
+              changeSlide();
+            }
+
+            function nextSlide(n){
+              index+=n;
+              changeSlide();
+            }
+
+            changeSlide();
+
+            function changeSlide(){
+
+              if(index>slides.length-1)
+                index=0;
+
+              if(index<0)
+                index=slides.length-1;
+
+
+
+                for(let i=0;i<slides.length;i++){
+                  slides[i].style.display = "none";
+
+                  dots[i].classList.remove("active");
+
+                }
+
+                slides[index].style.display = "block";
+                dots[index].classList.add("active");
+            }
+
+            </script>
+    </section>
+
+
+
+    <!-- OTHER -->
+    <!-- OTHER -->
+    <!-- OTHER -->
+    <!-- OTHER -->
+        <section id="other">
+          <div class="container">
+              <div class="jumbotron">
+                <h1>Friends</h1>
+                <p>A persons best friends is the closest and most special person
+                   in that person life.A best friend is someone with whom we share 
+                   all of the most important and crucial things in our life.Best 
+                   friends support each other in everything they do.</p>
+
+                   <div id="gallery" class="container-fluid">  
+                     <img src="paul5.jpg" class="img-responsive">
+                     <img src="paul6.jpg" class="img-responsive">
+                      <img src="paul7.jpg" class="img-responsive">
+                     <img src="paul8.jpg" class="img-responsive">
+                     <img src="paul9.jpg" class="img-responsive">
+                    <img src="paul10.jpg" class="img-responsive">
+                     <img src="paul11.jpg" class="card img-responsive">
+
+                   </div>
+                   
+                   <div id="myModal" class="modal fade" role="dialog">
+                     <div class="modal-dialog">
+                   
+                       <!-- Modal content-->
+                       <div class="modal-content">
+                         <div class="modal-body">
+                         </div>
+                       </div>
+                   
+                     </div>
+                   </div>
+        </section>
+      </div>
+      
+    </main>
+</body>
+</html>
